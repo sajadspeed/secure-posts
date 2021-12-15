@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<title>Secure Posts</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' href='css/style.css'>
+	<link rel='stylesheet' href='css/home.css'>
+	<link rel="stylesheet" href="css/remixicon.css">
+	<script src="js/main.js"></script>
+</head>
+
+<body>
+	<section class="login" id="login">
+		<div class="container">
+			<h1 id="login-header">ورود به نرم‌افزار</h1>
+			<div class="input-block">
+				<div class="block">
+					<input class="input" placeholder=" " id="username" dir="ltr">
+					<span class="placeholder">نام‌کاربری</span>
+				</div>
+			</div>
+			<div class="input-block">
+				<div class="block">
+					<input class="input" placeholder=" " id="password" type="password"
+						onkeyup="event.keyCode == 13 && document.getElementById('login-button').click()">
+					<span class="placeholder">پسورد</span>
+					<i class="ri-eye-line" id="toggle-password" onclick="togglePassword(this)"></i>
+				</div>
+			</div>
+			<button class="primary" onclick="login()" id="login-button">ورود</button>
+		</div>
+	</section>
+	<aside>
+		<header>
+			<div class="action" onclick="deleteUser()">
+				<i class="ri-user-unfollow-line"></i>
+				<span>حذف حساب</span>
+			</div>
+			<div class="action" onclick="addFile()">
+				<i class="ri-add-circle-line"></i>
+				<span>فایل جدید</span>
+			</div>
+		</header>
+		<div id="file-list">
+			
+		</div>
+	</aside>
+	<main>
+		<div id="toolbar">
+			<div class="box">
+				<i class='btn ri-heading' data-action="h2" title="h2"></i>
+				<i class='btn ri-bold' data-action="bold" title="Bold"></i>
+				<i class='btn ri-underline' data-action="underline" title="Underline"></i>
+			</div>
+
+			<div class="box">
+				<i class='btn ri-align-left' data-action="justifyLeft" title="Justify left"></i>
+				<i class='btn ri-align-center' data-action="justifyCenter" title="Justify center"></i>
+				<i class='btn ri-align-right' data-action="justifyRight" title="Justify right"></i>
+				<i class='btn ri-align-justify' data-action="formatBlock" title="Justify block"></i>
+				<i class='btn ri-list-ordered' data-action="insertOrderedList" title="Insert ordered list"></i>
+				<i class='btn ri-list-check' data-action="insertUnorderedList" title="Insert unordered list"></i>
+			</div>
+			<div class="box">
+				<i class='btn ri-arrow-go-back-line' data-action="undo" title="Undo"></i>
+				<i class='btn ri-eraser-line' data-action="removeFormat" title="Remove format"></i>
+			</div>
+			<div class="box">
+				<i class='btn ri-link-m' data-action="createLink" title="Insert Link"></i>
+				<i class='btn ri-link-unlink-m' data-action="unlink" title="Unlink"></i>
+				<i class='btn ri-image-add-line' data-action="insertImage" title="Insert image"></i>
+			</div>
+			<span class="date" id="date"></span>
+			<div class="box save-container" style="margin-right: auto;">
+				<div class="dot" id="save-dot"></div>
+				<i class='ri-save-line' style="cursor: pointer;" title="Save" onclick="saveFile()"></i>
+			</div>
+		</div>
+		<div id="editor">
+			<div id="visual-view" contenteditable onkeypress="typing()"></div>
+			<textarea id="html-view" name="memo"></textarea>
+		</div>
+	</main>
+</body>
+<script src="js/editor.js"></script>
+
+</html>

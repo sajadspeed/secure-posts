@@ -1,0 +1,28 @@
+{
+  "name": "secure-posts",
+  "version": "1.0.0",
+  "description": "Secure Posts",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "sajadspeed",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
+  },
+  "devDependencies": {
+    "electron": "^16.0.4",
+    "electron-installer-debian": "^3.1.0",
+    "electron-packager": "^15.4.0"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "dialogs": "^2.0.1",
+    "electron-root-path": "^1.0.16",
+    "fs": "0.0.1-security",
+    "jquery": "^3.6.0"
+  }
+}

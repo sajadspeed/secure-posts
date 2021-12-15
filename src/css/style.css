@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'fa';
+    src: url('../font/fa_font.woff') format('woff');
+}
+  
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	background-color: #18191a;
+	color: #FFF;
+	font-family: fa;
+	direction: rtl;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+i{
+    font-size: 1.5em;
+    display: block;
+}
+ul{
+    list-style-type: none;
+}
+ul li{
+    display: inline-block;
+    user-select: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+p{
+    text-align: justify;
+}
+a:visited{
+    color: none;
+}
+.a-link{
+    color: #5162FF;
+}
+button{
+    border: none;
+    background-color: inherit;
+    outline: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+img{
+    width: 100%;
+    opacity: 1;
+	transition: opacity 0.3s;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+form > .action{
+    font-size: .9em;
+    padding: 5px;
+}
+form > .action > a{
+    color: #84b1d6;
+    text-decoration: underline;
+}
+.input-block {
+    width: 100%;
+    position: relative;
+    margin: 7px 0px;
+}
+
+.input-block > .block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-block > .block .tag{
+    background-color: #5162ff;
+    width: 50px;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 10px;
+    height: auto;
+    font-size: 1em;
+}
+.input-block > .error{
+    font-size: .8em;
+    padding-left: .7em;
+    color: bb3939;
+    display: none;
+	margin: 2px 0px;
+}
+.input-block .input {
+    color: #495055;
+    font-family: Roboto, sans-serif;
+    width: 100%;
+    padding: 15px 15px;
+    border-radius: 10px;
+    border: 1px solid  #D9D9D9;
+    outline:none;
+    font-size: 1em;
+}
+.input-tag .input{
+    width: calc(100% - 58px);
+}
+.input-tag ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.input-tag ul li{
+    padding: 5px 10px;
+    margin: 3px;
+    background-color: #242526;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+.input-tag ul li:before{
+    content: "#";
+}
+.input-block.center .input{
+    text-align: center;
+}
+.input-block .input:invalid{
+    border-color: #bb3939;
+}
+.input-block .input{
+    background-color: #292d2f;
+    color: #FFF;
+}
+
+.input-block span.placeholder {
+    position: absolute;
+    margin: 17px 0;
+    padding: 0 4px;
+    color:  #6c757d;
+    top: 0px;
+    left: 17px;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: #FFF;
+    pointer-events: none;
+    font-size: .9em;
+    transform: scale(0.8) translateY(-30px);
+}
+
+.input-block.center span.placeholder{
+    left: 50%;
+    transform: scale(0.8) translateY(-30px) translateX(-50%);
+}
+.input-block span.placeholder {
+    color: #FFF;
+    background-color: #292d2f;
+    border-radius: 3px;
+    border: 1px solid #FFF;
+}  
+
+.input-block .input:focus + span.placeholder{
+	transform: scale(0.8) translateY(-30px)!important;
+}
+
+.input-block.center .input:focus + span.placeholder{
+	transform: scale(0.8) translateY(-30px) translateX(-50%)!important;
+}
+.input-block .input:placeholder-shown{
+    border-color: #D9D9D9 !important;
+}
+.input-block .input:placeholder-shown + span.placeholder {
+    transform: scale(1) translateY(0px);
+    border: none;
+}
+
+.input-block.center .input:placeholder-shown + span.placeholder {
+    transform: scale(1) translateY(0px) translateX(-50%) !important;
+}
+
+.input-block .input:focus{
+    border-color: #284B63;
+}
+
+.input-block .input:focus + span.placeholder {
+    color: #284B63;
+}
+.input-block .input:focus + span.placeholder {
+    color: #FFF;
+    background-color: #292d2f;
+    border-radius: 3px;
+    border: 1px solid #FFF;
+}
+
+.input-block #toggle-password {
+    position: absolute;
+    padding: 0 4px;
+    color: #6c757d;
+    right: 14px;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 10;
+    background-color: #FFF;
+	color: #FFF;
+    background-color: #292d2f;
+}
+
+button.primary{
+    width: 70%;
+    height: 45px;
+    padding: 5px 10px;
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 1.3em;
+    background-color: #5162FF;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.25);
+    border-radius: 20px/50px;
+    color: #FFF;
+    margin: 5px 2px;
+}
+
+button.primary.green{
+    background-color: #44bd32;
+}
+.input-block.textarea{
+    display: block;
+}
+.input-block.textarea > .block{
+    display: block;
+}
+textarea{
+    width: 100% !important;
+    min-height: 100px;
+    max-height: 160px;
+}
+.input-checkbox{
+    align-self: start;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+.input-checkbox label{
+    font-size: .9em;
+    padding: 0px 4px;
+}
+input[type=checkbox]{
+    width: 17px;
+    height: 17px;
+}
+
+/**RTL***/
+
+.input-block span.placeholder{
+    margin: 14px 0px;
+    right: 17px;
+    left: unset;
+}
+.input-block > .block .tag{
+    width: 65px;
+}
+.input-tag .input{
+    width: calc(100% - 70px);
+}
+.input-block #toggle-password{
+    right: unset;
+    left: 14px;
+}
+.date{
+	padding: 0px 10px;
+}

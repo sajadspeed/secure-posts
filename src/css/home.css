@@ -1,0 +1,170 @@
+section.login{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #1c1c1d;
+	z-index: 2;
+}
+.login .container{
+	width: 35%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+main{
+	width: 70%;
+	height: 100%;
+	float: right;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+}
+aside{
+	width: 30%;
+	height: 100%;
+	float: right;
+	padding: 10px;
+	overflow: auto;
+}
+aside header{
+	width: 100%;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+.action{
+	display: flex;
+	align-items: center;
+	margin: 5;
+	cursor: pointer;
+}
+.action i{
+	padding: 0px 3px;
+}
+.file{
+	width: 100%;
+	background-color: #1c1c1d;
+	padding: 5px;
+	margin: 10px 0px;
+	border: 1px solid #323233;
+	display: flex;
+	align-items: center;
+	font-family: fa;
+	border-radius: 10px;
+	cursor: pointer;
+	direction: rtl;
+}
+.file.active{
+	border-color: #FFF;
+}
+.file i{
+	padding: 5px;
+	font-size: 28px;
+}
+/*** Editor ***/
+
+#editor{
+    width: 100%;
+	flex: 1;
+    margin: 0px 0px;
+    overflow: auto;
+    resize: none;
+    display: flex;
+    flex-direction: column;
+	background-color: #1e1e1e;
+}
+#toolbar{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    border-bottom: 1px solid #CCC;
+    background-color: #242526;
+    overflow-x: auto;
+}
+#toolbar .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #CCC;
+    padding: 0px 5px;
+}
+#toolbar .box:last-child{
+    border-left: none;
+}
+#toolbar .btn{
+    user-select: none;
+    cursor: pointer;
+    padding: 0px 2px;
+}
+#editor #visual-view{
+    height: 100%;
+	height: 100%;
+    outline: none;
+    padding: 10px;
+    flex:1;
+}
+#editor #html-view{
+    display: none;
+}
+
+#editor #visual-view p{
+    text-align: justify;
+    line-height: 1.6em !important;
+    padding: 5px 0px;
+}
+#editor #visual-view h2{
+    padding: 5px 4px 4px 6px;
+    margin-top: 20px;
+}
+#editor #visual-view img{
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 15px 0px;
+}
+#editor #visual-view ul{
+    width: 100%;
+    list-style-type: disc;
+    list-style-position: outside;
+    padding: 5px 2em;
+}
+#editor #visual-view ol{
+    width: 100%;
+    list-style-position: outside;
+    padding: 5px 2em;
+}
+#editor #visual-view ul li{
+    user-select: initial;
+    display: list-item;
+    padding: 2px 0px;
+    line-height: 1.5em;
+}
+#editor #visual-view a{
+    font-size: inherit;
+    color: #5162FF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#editor #visual-view b{
+    font-size: inherit;
+    color: #cc4334;
+}
+
+.save-container{
+	position: relative;
+}
+.save-container .dot{
+	width: 10px;
+	height: 10px;
+	background-color: #e74c3c;
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	border-radius: 30px;
+	display: none;
+}
+
+/************/
