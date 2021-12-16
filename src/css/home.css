@@ -1,3 +1,19 @@
+*::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #060606;
+}
+
+*::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #060606;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	background-color: #2a2a2a;
+}
 section.login{
 	width: 100%;
 	height: 100%;
@@ -27,13 +43,20 @@ aside{
 	height: 100%;
 	float: right;
 	padding: 10px;
-	overflow: auto;
+	display: flex;
+	flex-direction: column;
 }
 aside header{
 	width: 100%;
 	margin-bottom: 5px;
 	display: flex;
 	justify-content: space-between;
+}
+aside #file-list{
+	flex: 1;
+	overflow: auto;
+	padding: 5px;
+	direction: ltr;
 }
 .action{
 	display: flex;

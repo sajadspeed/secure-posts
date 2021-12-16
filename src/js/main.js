@@ -102,6 +102,7 @@ const addFile = (data = "")=>{
 						}
 						else{
 							$("#file-list").append(view_file(fileName, filesInfo.last_id, tmpDate));
+							$("#file-list").animate({ scrollTop: $("#file-list")[0].scrollHeight}, 500);
 							openFile(filesInfo.last_id);
 							setSaveStatus(true);
 						}
