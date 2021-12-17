@@ -1,1 +1,3 @@
 node_modules
+src/data/user_info.json
+src/data/secure_files/*.ss
